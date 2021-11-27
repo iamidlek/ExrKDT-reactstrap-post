@@ -11,7 +11,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/ExrKDT-reactstrap-post" element={<Main />} />
       </Routes>
     </Provider>
   </BrowserRouter>,
