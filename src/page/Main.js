@@ -24,21 +24,21 @@ const Main = () => {
     <div>
       <Write />
       <Container className="mt-4">
-        <CardGroup className="d-flex flex-wrap border border-ligth container-sm flex-column flex-md-row">
+        <CardGroup className="d-flex flex-wrap align-items-center border border-ligth flex-column flex-md-row">
           {postItems.map((item) => (
-            <Card key={item.title} className="">
-              <Col>
+            <Col md={6} sm={6}>
+              <Card key={item.title}>
                 <CardImg className="" alt="Card image cap" src={item.url} />
-              </Col>
-              <CardBody>
-                <CardTitle tag="h5">{item.title}</CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  {item.subtitle}
-                </CardSubtitle>
-                <CardText>{item.text}</CardText>
-                <Button onClick={() => delItem(item.title)}>Button</Button>
-              </CardBody>
-            </Card>
+                <CardBody>
+                  <CardTitle tag="h5">{item.title}</CardTitle>
+                  <CardSubtitle className="mb-2 text-muted" tag="h6">
+                    {item.subtitle}
+                  </CardSubtitle>
+                  <CardText>{item.text}</CardText>
+                  <Button onClick={() => delItem(item.title)}>Button</Button>
+                </CardBody>
+              </Card>
+            </Col>
           ))}
         </CardGroup>
       </Container>
